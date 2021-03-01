@@ -1,0 +1,32 @@
+# the partial f test is used in model building and variable selection to help decide if a variable term can be removed  from a model without making the model significantly worse
+# or adding anything to make the model better
+
+# THE LARGER MODEL=FULL MODEL
+#THE MODEL WITH ONE OR MORE VARIABLE TERMS REMOVED=REDUCED MODEL
+# PARTIAL F  TEST IS USED TO COMPARE NESTED MODEL
+
+
+# EXAMPLE 1
+# SUPPOSE WE HAVE TO ESTIMATE LUNGCAP USING AGE GENDER SMOKE HEIGHT
+# REGRESSION EQUATION=b0+b1*AGE+b2*GENDER+b3*SMOKE+B4*HEIGHT  = FULL MODEL 
+# NOW REDUCING THE ABOVE FULL MODEL BY REMOVING HEIGHT
+# REGRESSION EQUATION=b0+b1*AGE+b2*GENDER+b3*SMOKE
+# REDUCED ARE A SUBSET OF FULL MODEL
+# IF HEIGHT IMPROVES THE MODEL THAN INCLUDE OTHERWISE REMOVE AND IF NO CHANGE AS SIMPLE IS PREFFERED
+
+
+# EXAMPLE2
+# RELATION BTE WLUNG CAPACITY AND AGE
+# WE MAY THINK RELATTIONSHIP IS NOT LINEAR AND MIGHT WANNA ADD AGE^2
+# full model=b0+b1age+b2*age^2
+# reduced remove square 
+# if the model is better or not by determing 
+
+# to determine if the full model is significantly better e will checked if the sum of squared error or the residual sum of squares is significantly lower in the fulll model as compared to the reduced model
+
+
+#SSE SUM OF SQUARED ERROR
+#IT MEASURES HOW CLOSE THE MODEL PREDICTED Y VALUES(THE LINES) ARE TO THE OBSERVED Y-VALUES (THE POINTS)
+
+#PARTIAL F TEST
+#COMPARES THE SSE OF THE FULL AND REDUCED MODEL TO SEE IF THERE HAS BEEN A SIGNIFICANT CHANGE IN THE SSE DUE TO REMOVAL OF A TERM AND A SIGNIFICANT CHANGE IN HOW WELL THE MODEL FITS OR PREDICTS THE OBSERVED DATA
